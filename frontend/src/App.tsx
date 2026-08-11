@@ -16,6 +16,8 @@ import ChallanList from './pages/challans/ChallanList';
 import ChallanForm from './pages/challans/ChallanForm';
 import ChallanDetail from './pages/challans/ChallanDetail';
 
+import Dashboard from './pages/Dashboard';
+
 export default function App() {
   return (
     <AuthProvider>
@@ -30,7 +32,7 @@ export default function App() {
               </ProtectedRoute>
             }
           >
-            <Route index element={<div className="text-white">Dashboard placeholder</div>} />
+            <Route index element={<Dashboard />} />
 
             <Route path="customers" element={<CustomerList />} />
             <Route path="customers/new" element={<CustomerForm />} />
