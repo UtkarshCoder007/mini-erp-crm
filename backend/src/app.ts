@@ -10,7 +10,12 @@ import challanRoutes from './modules/challans/challans.routes';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://mini-erp-crm-six-pi.vercel.app',
+  ],
+}));
 app.use(express.json());
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
